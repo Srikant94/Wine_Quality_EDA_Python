@@ -1,65 +1,116 @@
-Wine Quality Exploratory Data Analysis
+# Wine Quality Exploratory Data Analysis (EDA)
 
-- Two datasets are included, related to red and white vinho verde wine samples, from the north of Portugal. The goal is to model wine quality based on physicochemical tests. (see [Cortez et al., 2009], http://www3.dsi.uminho.pt/pcortez/wine/).
+## Project Overview
 
-- The two datasets are related to red and white variants of the Portuguese "Vinho Verde" wine. For more details, consult: http://www.vinhoverde.pt/en/ or the reference [Cortez et al., 2009].  Due to privacy and logistic issues, only physicochemical (inputs) and sensory (the output) variables are available (e.g. there is no data about grape types, wine brand, wine selling price, etc.).
+This project focuses on performing **Exploratory Data Analysis (EDA)** on the **Wine Quality Dataset**, which contains physicochemical properties of red and white wines. The objective of this analysis is to understand how different chemical attributes influence the **quality ratings of wines**.
 
-- These datasets can be viewed as classification or regression tasks.  The classes are ordered and not balanced (e.g. there are many more normal wines than excellent or poor ones). Outlier detection algorithms could be used to detect the few excellent or poor wines. Also, we are not sure if all input variables are relevant. So it could be interesting to test feature selection methods.
+Wine quality is influenced by several factors such as acidity levels, alcohol content, sugar concentration, sulphates, and density. Through systematic data exploration and visualization, this project aims to identify patterns, correlations, and insights that explain how these variables relate to wine quality.
 
-- Input Variables based on physicochemical tests :-
+The project is divided into three main analytical components:
 
-1 - fixed acidity
-2 - volatile acidity
-3 - citric acid
-4 - residual sugar
-5 - chlorides
-6 - free sulfur dioxide
-7 - total sulfur dioxide
-8 - density
-9 - pH
-10 - sulphates
-11 - alcohol
+* Exploratory Data Analysis of **Red Wine Dataset**
+* Exploratory Data Analysis of **White Wine Dataset**
+* **Comparative Analysis** between Red and White Wines
 
-- Output variable (based on sensory data):
+These analyses help highlight similarities and differences between the two wine types and identify the features that most strongly influence wine quality.
 
-12 - quality (score between 0 and 10)
+---
 
-- Description: This project performs Exploratory Data Analysis on Red and White Wine Quality datasets to understand how physicochemical properties influence wine quality ratings.
+## Dataset Information
 
-- Objectives:
-1. Explore dataset distributions
-2. Identify correlations
-3. Detect outliers
-4. Compare red and white wines
+The datasets used in this project come from the **Wine Quality dataset**, which contains physicochemical tests conducted on different wine samples.
 
-- Tools Used:
-1. Python
-2. Pandas
-3. Seaborn
-4. Matplotlib
-5. Scikit-learn
+Each dataset includes the following features:
 
-- Project Components:
-1. Red Wine EDA
-2. White Wine EDA
-3. Comparative Analysis
+| Feature              | Description                                      |
+| -------------------- | ------------------------------------------------ |
+| Fixed Acidity        | Concentration of non-volatile acids              |
+| Volatile Acidity     | Amount of acetic acid present in wine            |
+| Citric Acid          | Natural acid contributing to flavor              |
+| Residual Sugar       | Remaining sugar after fermentation               |
+| Chlorides            | Salt concentration                               |
+| Free Sulfur Dioxide  | Free SO₂ level                                   |
+| Total Sulfur Dioxide | Total SO₂ level                                  |
+| Density              | Density of wine                                  |
+| pH                   | Acidity level                                    |
+| Sulphates            | Preservative contributing to microbial stability |
+| Alcohol              | Alcohol percentage                               |
+| Quality              | Wine quality rating (score between 0–10)         |
 
-Red Wine - Key Insights
-1. Most red wines have quality 5–6
-2. Alcohol positively impacts quality
-3. Volatile acidity negatively impacts quality
-4. Several features contain outliers
+The **quality variable** represents the sensory quality of wine evaluated by wine experts.
 
-White Wine - Key Insights
-1. Most white wines have quality 6–7
-2. Residual sugar shows large variability
-3. Alcohol positively correlates with quality
-4. Sulphates show moderate positive influence
+---
 
-Comparison - Key Findings
-1. White wines tend to have higher sugar levels
-2. Red wines tend to have higher acidity
+## Objectives of the Analysis
 
-Alohol positively influences quality for both wine types
+The main objectives of this project include:
 
-White wines appear to have slightly higher average quality ratings# Wine_Quality_EDA_Python
+* Understanding the distribution of wine quality ratings
+* Identifying important physicochemical features affecting wine quality
+* Exploring relationships between different wine attributes
+* Detecting outliers and unusual observations in the dataset
+* Comparing characteristics between red and white wines
+
+---
+
+## Tools and Technologies Used
+
+The following tools were used for the analysis:
+
+* Python
+* Pandas
+* NumPy
+* Matplotlib
+* Seaborn
+* Scikit-learn
+* Jupyter Notebook
+
+These tools enabled efficient data manipulation, visualization, and exploratory analysis.
+
+---
+
+## Project Structure
+
+```
+wine-quality-eda
+│
+├── data
+│   ├── winequality-red.csv
+│   └── winequality-white.csv
+│
+├── notebooks
+│   ├── red_wine_eda.ipynb
+│   ├── white_wine_eda.ipynb
+│   └── wine_comparison_eda.ipynb
+│
+├── images
+│
+└── README.md
+```
+
+---
+
+## Key Insights from the Project
+
+Some major insights discovered during the analysis include:
+
+* Most wines in the dataset fall within **quality ratings between 5 and 7**, indicating that the majority of wines are of moderate quality.
+* **Alcohol content shows a strong positive relationship with wine quality**, suggesting wines with higher alcohol levels tend to receive higher ratings.
+* **Volatile acidity negatively impacts wine quality**, indicating that excessive acidity may reduce perceived quality.
+* White wines generally contain **higher residual sugar levels**, making them sweeter compared to red wines.
+* Certain chemical properties such as density, acidity, and sulphates show meaningful correlations with wine quality.
+
+---
+
+## Conclusion
+
+Through exploratory data analysis, this project provides insights into how various chemical attributes influence wine quality. Understanding these relationships can help wine producers and analysts gain a deeper understanding of the factors contributing to higher-quality wines.
+
+This project also demonstrates practical skills in **data exploration, visualization, and analytical thinking**, which are fundamental components of data analytics and data science workflows.
+
+---
+
+## Author
+
+Srikant Verma
+Data Analytics & Data Science Learner
